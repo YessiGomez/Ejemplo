@@ -64,13 +64,13 @@ void setup() {
   reloj=new DateTime();
   
 }
-int sum=0;
+int s=0;
 void loop() {
-  sum++;
+  s++;
   horaActual.clear();
   reloj->getTime();
   horaActual["hora"]=reloj->timeStringBuff;
-  horaActual["Sumatoria"]=sum;
+  horaActual["Sumatoria"]=s;
   serializeJson(horaActual,Serial);
   Serial.println("__");
   delay(1000);

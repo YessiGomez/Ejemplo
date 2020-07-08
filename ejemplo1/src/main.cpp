@@ -51,7 +51,7 @@ public:
 };
 conexionWeb *webInterface;
 DateTime *reloj;
-StaticJsonDocument<512> horaAct;
+StaticJsonDocument<512> hraAc;
 
 
 const char *ssid="INFINITUM8007_2.4";
@@ -67,11 +67,11 @@ void setup() {
 int s=0;
 void loop() {
   s++;
-  horaAct.clear();
+  hraAc.clear();
   reloj->getTime();
-  horaAct["hora"]=reloj->timeStringBuff;
-  horaAct["Sumatoria"]=s;
-  serializeJson(horaAct,Serial);
+  hraAc["hora"]=reloj->timeStringBuff;
+  hraAc["Sumatoria"]=s;
+  serializeJson(hraAc,Serial);
   Serial.println("__");
   delay(1000);
 }

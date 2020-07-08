@@ -67,11 +67,11 @@ void setup() {
 int s=0;
 void loop() {
   s++;
-  horaActual.clear();
+  horaAct.clear();
   reloj->getTime();
-  horaActual["hora"]=reloj->timeStringBuff;
-  horaActual["Sumatoria"]=s;
-  serializeJson(horaActual,Serial);
+  horaAct["hora"]=reloj->timeStringBuff;
+  horaAct["Sumatoria"]=s;
+  serializeJson(horaAct,Serial);
   Serial.println("__");
   delay(1000);
 }

@@ -51,7 +51,7 @@ public:
 };
 conexionWeb *webInterface;
 DateTime *reloj;
-StaticJsonDocument<512> horaActual;
+StaticJsonDocument<512> horaAct;
 
 
 const char *ssid="INFINITUM8007_2.4";
